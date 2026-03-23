@@ -13,7 +13,7 @@ if test "$1" != "ver_none"
 then
 
   # STEP 1 Increment BuildVersion Number
-  oldnum="$( grep 'BuildVersion' info.lua | cut -d $'\"' -f2 | cut -d $'\"' -f1 )"
+  oldnum="$( grep -m 1 'BuildVersion' info.lua | cut -d $'\"' -f2 | cut -d $'\"' -f1 )"
   #echo $oldnum
   newnum="$oldnum"
 
